@@ -5,15 +5,42 @@
   <artifactId>crudspring</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
+
+
   <build>
     <finalName>crudspring</finalName>
+
+      <plugins>
+
+          <!--Plugin do Jetty-->
+          <plugin>
+              <groupId>org.mortbay.jetty</groupId>
+              <artifactId>jetty-maven-plugin</artifactId>
+              <version>8.1.16.v20140903</version>
+              <configuration>
+                  <scanIntervalSeconds>3</scanIntervalSeconds>
+                  <webApp>
+                      <contextPath>/crudspring</contextPath>
+                  </webApp>
+              </configuration>
+          </plugin>
+
+      </plugins>
   </build>
   
   
   
   <dependencies>
-  
-    <dependency>
+
+      <!--Depêndencia do Jetty-->
+      <dependency>
+          <groupId>org.mortbay.jetty</groupId>
+          <artifactId>jetty-maven-plugin</artifactId>
+          <version>8.1.16.v20140903</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>4.1.0.RELEASE</version>

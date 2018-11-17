@@ -8,7 +8,7 @@ public class HomeController {
 	
 	@RequestMapping("ola_mundo")
 	public String helloWordSpring() {
-		
+
 		return "olaMundo";
 	}
 }
