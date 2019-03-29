@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 	
-	@RequestMapping("ola_mundo")
+	@RequestMapping("olamundo")
 	public String helloWordSpring() {
 
 		return "olaMundo";
